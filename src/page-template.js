@@ -1,4 +1,6 @@
-module.exports = (name, github) => {
+module.exports = templateData => {
+  console.log(templateData);
+
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -11,15 +13,15 @@ module.exports = (name, github) => {
     </head>
     
     <body>
-      <h1>${name}</h1>
-      <h2><a href="https://github.com/${github}">Github</a></h2>
+      <h1>${templateData.name}</h1>
+      <h2><a href="https://github.com/${templateDatagithub}">Github</a></h2>
     </body>
     </html>
     `;
   };
   
   
-  module.exports = generatePage;
+
   
   //In order to use functions from one module inside another, we use the related statements module.exports and require. In the source file that has the functions we want to make available to other files, 
   //we use module.exports at its bottom. In the destination file(s) that we want to receive those exported functions, we put require at the top.
